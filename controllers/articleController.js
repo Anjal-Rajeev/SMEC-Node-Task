@@ -176,12 +176,14 @@ export const getArticlesByCategory = async (req, res) => {
             res.status(200).json({
                 success: true,
                 message: 'Successfull.',
+                count: data.length,
                 data: data
             })
         } else {
             res.status(400).json({
                 success: false,
                 message: 'Article not found.',
+                count: 0,
                 data: []
             })
         }
