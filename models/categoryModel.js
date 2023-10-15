@@ -1,15 +1,12 @@
+import { ObjectId } from "mongodb";
 import mongoose from "mongoose";
 
 const CategorySchema = new mongoose.Schema({
-    strCategoryName: {
-        type: String,
-        required: true,
-    },
-    strCategoryId: {
+    categoryName: {
         type: String,
         required: true,
     }
-})
+},{ timestamps: true })
 
-const categories = mongoose.model('categories', CategorySchema);
-module.exports = categories;
+const Categories = mongoose.model('categories', CategorySchema);
+export default Categories;

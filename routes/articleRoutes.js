@@ -1,6 +1,6 @@
 import express from 'express'
 const router = express.Router()
-import {createArticle, deleteArticle, getArticles, updateArticles} from '../controllers/articleController.js'
+import {createArticle, deleteArticle, getArticles, getArticlesByCategory, updateArticles} from '../controllers/articleController.js'
 import multer from 'multer'
 
 // create multer storage----------
@@ -31,5 +31,13 @@ router.delete('/:id', deleteArticle)
 
 // API to list all Articles
 router.get('/', getArticles)
+
+
+// API to list Articles based on categories
+router.get('/category', getArticlesByCategory)
+
+
+
+
 
 export default router

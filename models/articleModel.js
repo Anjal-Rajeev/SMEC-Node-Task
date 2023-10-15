@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import mongoose from "mongoose";
 
 const ArticleSchema = new mongoose.Schema({
@@ -14,7 +15,7 @@ const ArticleSchema = new mongoose.Schema({
         required: true,
     },
     categories: {
-        type: [String],
+        type: Array,
         required: true,
     },
     image: {

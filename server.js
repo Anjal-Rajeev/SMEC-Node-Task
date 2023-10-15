@@ -15,8 +15,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 
+
 app.use('/api/article', articleRoutes)
 app.use('/api/category', categoryRoutes)
+
 
 const __dirname=path.resolve()
 app.use("/images",express.static(path.join(__dirname,"/images")))
